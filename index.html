@@ -283,7 +283,7 @@
                 href="./assets/doc/Tomas_Matusek_LB.pdf"
                 download="Resume_Tomas_Matusek"
                 class="btn btn-brand"
-                >My Resume <i class="las la-file-download h4"></i
+                >My Resume <i class="las la-file-download"></i
               ></a>
             </div>
           </div>
@@ -457,9 +457,22 @@
               <h1>Get In Touch</h1>
             </div>
           </div>
+
           <!-- FORM -->
           <div class="row pb-4" data-aos="fade-up">
             <form class="col-lg-6" method="post" action="" id="contact-form">
+              <div
+                class="form-control alert alert-success alert-dismissible fade show mt-3 d-none col-lg-6"
+                role="alert"
+              >
+                <strong> You message has been sent. </strong>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
+              </div>
               <div class="mb-3">
                 <input
                   type="email"
@@ -472,7 +485,7 @@
               </div>
               <div class="mb-3">
                 <textarea
-                  class="form-control"
+                  class="form-control bg-base"
                   name="message"
                   id="exampleFormControlTextarea1"
                   placeholder="Your Message"
