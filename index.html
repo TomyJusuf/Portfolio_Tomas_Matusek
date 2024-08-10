@@ -87,6 +87,9 @@
               <a
                 href="https://resume-tomas-matusek.netlify.app/"
                 target="_blank"
+                data-bs-toggle="tooltip"
+                data-bs-placement="right"
+                data-bs-title="Link to resume-tomas-matusek."
                 ><i class="las la-magic h3"></i
               ></a>
             </p>
@@ -115,7 +118,7 @@
                 below.
               </p>
               <div class="" data-aos="fade-up" data-aos-delay="700">
-                <a href="#contact" class="btn btn-brand d-inline-block me-3 h5"
+                <a href="#work" class="btn btn-brand d-inline-block me-3 h5"
                   >Explore My Work</a
                 >
                 <a href="#" class="custom-link h5">Call: (430) 677-64035317</a>
@@ -195,7 +198,7 @@
                 <div class="card-custom-content p-4">
                   <h4>Barber Pablo</h4>
                   <p class="text-brand mb-0">
-                    Website for a Barber shop base in Villach
+                    Template Website for a Barber shop, Villach
                   </p>
                   <a
                     href="https://barber-shop-pablo.netlify.app/"
@@ -226,14 +229,19 @@
                 <div class="card-custom-content p-4">
                   <h4>Pizza Emmy</h4>
                   <p class="text-brand mb-0">
-                    Designing table menu for Pizza & street. Gerbergasse 9
+                    Designing table menu for a Pizza shop, Villach
                   </p>
                   <a
                     href="https://maps.app.goo.gl/qxMo7uSC8M35WbrLA"
                     class="custom-link"
                     target="_blank"
-                    >Visit here</a
+                    data-bs-toggle="tooltip"
+                    data-bs-placement="top"
+                    data-bs-custom-class="custom-tooltip"
+                    data-bs-title="Simple table menu for a Pizza shop. Created with Canvas Application"
                   >
+                    Info
+                  </a>
                 </div>
               </div>
             </div>
@@ -279,12 +287,15 @@
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="700">
               <h3 class="mb-4">Get In Touch</h3>
               <a href="#contact" class="btn btn-brand me-4">Email Me</a>
-              <a
+              <button
                 href="./assets/doc/Tomas_Matusek_LB.pdf"
                 download="Resume_Tomas_Matusek"
                 class="btn btn-brand"
-                >My Resume <i class="las la-file-download"></i
-              ></a>
+                data-bs-toggle="tooltip"
+                data-bs-title="Download pdf file ?"
+              >
+                My Resume <i class="las la-file-download"></i>
+              </button>
             </div>
           </div>
         </div>
@@ -434,7 +445,10 @@
                         target="_blank"
                         rel="noopener noreferrer"
                         class="custom-link text-brand"
-                        onclick="alert('Please take note that the website is hosted on Render. Please give the App time to load. Thank you.')"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        data-bs-custom-class="custom-tooltip"
+                        data-bs-title="Please take note that the website is hosted on Render.com Please give the App time to be fully loaded. Thank you."
                         >Visit project here</a
                       >
                     </div>
@@ -537,7 +551,7 @@
       <!-- //FOOTER -->
     </div>
     <!-- //COONTENT WRAPPER -->
-
+    <script src="./assets/js/poppover.min.js "></script>
     <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/main.js"></script>
