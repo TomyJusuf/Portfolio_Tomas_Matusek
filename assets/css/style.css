@@ -238,3 +238,14 @@ input.form-control {
 .card-custom-image {
   overflow: hidden;
 }
+
+/* Custom tooltip styles */
+.tooltip-inner {
+  background-color: var(--color-brand) !important;
+  color: var(--color-base) !important;
+}
+
+.tooltip-arrow::before {
+  border-top-color: var(--color-brand) !important;
+  border-right-color: var(--color-brand) !important;
+}
