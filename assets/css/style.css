@@ -44,6 +44,24 @@ img {
 .text-brand {
   color: var(--color-brand);
 }
+textarea.form-control::placeholder,
+input.form-control::placeholder {
+  color: var(--color-brand);
+  opacity: 1;
+}
+textarea.form-control:focus,
+input.form-control:focus {
+  color: var(--color-brand);
+  background-color: var(--color-base);
+  border: var(--color-brand2) 1px solid;
+}
+textarea.form-control,
+input.form-control {
+  background-color: var(--color-base);
+  color: var(--color-brand);
+  border: none;
+}
+
 .bg-base {
   background-color: var(--color-base);
 }
