@@ -20,16 +20,15 @@ const submitForm = (e) => {
   e.preventDefault();
 
   const myForm = document.getElementById('contact-form');
-  const formData = new FormData(myForm);
+
   emailjs
     .sendForm('service_du5b26j', 'template_contact_form', '#contact-form')
     .then(
       (response) => {
-        alert('Thank You for Contacting Me!');
-        console.log('SUCCESS!', response.status, response.text);
+        alertAction(response.status);
       },
       (error) => {
-        console.log('FAILED...', error);
+        throw new Error(error.text);
       }
     );
 
@@ -40,3 +39,11 @@ window.addEventListener('DOMContentLoaded', () => {
   const myForm = document.getElementById('contact-form');
   myForm.addEventListener('submit', submitForm);
 });
+
+function alertAction(echo) {
+  if (echo === 200) {
+    const alertBtn = document.querySelector('.alert');
+    alertBtn.classList.remove('d-none');
+    alertBtn.classList.add('d-block');
+  }
+}
