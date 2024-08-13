@@ -152,37 +152,25 @@ input.form-control {
     border: 5px solid var(--color-brand);
     box-sizing: border-box; /* Include border in size calculation */
     transform: rotate(0deg);
-    animation: rotateBorder 10s linear infinite,
-      changeBorderColor 5s linear infinite;
-  }
-
-  /* Keyframes for rotating border */
-  @keyframes rotateBorder {
-    0% {
-      border: 5px solid var(--color-brand);
-      border-radius: 50%; /* Keep the border round */
-      transform: rotate(0deg);
-    }
-    100% {
-      border: 5px solid var(--color-brand);
-      border-radius: 50%; /* Keep the border round */
-      transform: rotate(360deg); /* Rotate the border */
-    }
+    animation: changeBorderColor 5s linear infinite;
   }
 
   /* Keyframes for changing border color */
   @keyframes changeBorderColor {
     0% {
-      border-color: var(--color-brand);
+      border-color: rgb(80, 7, 109);
     }
     50% {
-      border-color: rgb(158, 215, 58); /* Example accent color */
+      border-color: rgb(161, 214, 235); /* Example accent color */
     }
     70% {
-      border-color: rgb(133, 228, 173);
+      border-color: rgb(167, 130, 228);
+    }
+    80% {
+      border-color: rgb(121, 207, 233);
     }
     100% {
-      border-color: var(--color-brand);
+      border-color: rgb(80, 7, 109);
     }
   }
 
