@@ -40,17 +40,43 @@ window.addEventListener('DOMContentLoaded', () => {
   myForm.addEventListener('submit', submitForm);
 });
 
-function alertAction(echo) {
-  if (echo === 200) {
-    const alertBtn = document.querySelector('.alert');
-    alertBtn.classList.remove('d-none');
-    alertBtn.classList.add('d-block');
-  }
-}
+// function alertAction(echo) {
+//   if (echo === 200) {
+//     const alertBtn = document.querySelector('.alert');
+//     alertBtn.classList.remove('d-none');
+//     alertBtn.classList.add('d-block');
+//   }
+// }
 
-const tooltipTriggerList = document.querySelectorAll(
-  '[data-bs-toggle="tooltip"]'
-);
-const tooltipList = [...tooltipTriggerList].map(
-  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-);
+// const tooltipTriggerList = document.querySelectorAll(
+//   '[data-bs-toggle="tooltip"]'
+// );
+// const tooltipList = [...tooltipTriggerList].map(
+//   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+// );
+
+// /// Function to open the modal and display the image
+// function openModal(imageSrc, captionText) {
+//   const modal = document.getElementById('imageModal');
+//   const modalImg = document.getElementById('modalImage');
+//   const caption = document.getElementById('caption');
+
+//   modal.style.display = 'block';
+//   modalImg.src = imageSrc;
+//   caption.innerHTML = captionText;
+// }
+
+// // Function to close the modal
+// function closeModal() {
+//   document.getElementById('imageModal').style.display = 'none';
+// }
+
+// // Adding event listeners to links
+// document.querySelectorAll('.custom-link').forEach((link) => {
+//   link.addEventListener('click', function (event) {
+//     event.preventDefault();
+//     const imageSrc = this.getAttribute('data-image');
+//     const captionText = this.getAttribute('data-caption');
+//     openModal(imageSrc, captionText);
+//   });
+// });

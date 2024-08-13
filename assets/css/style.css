@@ -74,6 +74,9 @@ input.form-control {
   box-shadow: -6px 6px 0 0px var(--color-brand);
 }
 
+.shadow-effect-1:hover {
+  box-shadow: -6px 6px 0 0px rgb(220, 33, 70);
+}
 .iconbox {
   width: 60px;
   height: 60px;
@@ -199,6 +202,45 @@ input.form-control {
   color: var(--color-base);
   width: 200px;
 }
+.btn-icon {
+  background-color: var(--color-brand);
+  border-color: var(--color-brand);
+  color: var(--color-base);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  /* padding: 5px 5px; */
+}
+
+.btn-icon:hover,
+.btn-icon:focus {
+  background-color: var(--color-brand2);
+  border-color: var(--color-brand);
+  color: var(--color-base);
+  width: 50px;
+}
+
+.btn-custom-icon::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background-color: rgb(220, 33, 70);
+  position: absolute;
+  left: 0;
+  top: 96%;
+  transition: all 0.5s;
+}
+.flag-color {
+  color: rgb(220, 33, 70);
+}
+.btn-custom-icon:hover::after {
+  width: 100%;
+}
+.btn-custom-icon {
+  position: relative;
+}
 
 .btn-brand:hover,
 .btn-brand:focus {
@@ -248,4 +290,57 @@ input.form-control {
 .tooltip-arrow::before {
   border-top-color: var(--color-brand) !important;
   border-right-color: var(--color-brand) !important;
+}
+
+/* Fullscreen Modal styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0px;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+/* Modal Content (the image) */
+.modal-content {
+  margin: auto;
+  margin-top: 50px;
+  display: block;
+  width: 80%; /* Adjust based on your design */
+  height: 90vh;
+  max-width: 1000px; /* Adjust based on your design */
+  cursor: pointer; /* Show a pointer cursor on hover to indicate it is clickable */
+  object-fit: contain;
+  background: #2b2b2b7f;
+}
+
+/* Caption of Modal */
+#caption {
+  margin: auto;
+  display: block;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  color: #f1f1f1;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer; /* Show a pointer cursor on hover */
+}
+
+/* Close Button on hover */
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
 }
