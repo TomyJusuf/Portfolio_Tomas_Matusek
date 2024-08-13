@@ -48,14 +48,7 @@ function alertAction(echo) {
   }
 }
 
-const tooltipTriggerList = document.querySelectorAll(
-  '[data-bs-toggle="tooltip"]'
-);
-const tooltipList = [...tooltipTriggerList].map(
-  (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
-);
-
-/// Function to open the modal and display the image
+// Function to open the modal and display the image
 function openModal(imageSrc, captionText) {
   const modal = document.getElementById('imageModal');
   const modalImg = document.getElementById('modalImage');
@@ -64,6 +57,23 @@ function openModal(imageSrc, captionText) {
   modal.style.display = 'block';
   modalImg.src = imageSrc;
   caption.innerHTML = captionText;
+
+  // Close the modal when clicking outside the image
+  modal.addEventListener(
+    'click',
+    function (event) {
+      if (event.target === modal || event.target === modalImg) {
+        closeModal();
+      }
+    },
+    { once: true }
+  ); // Ensure this event listener is only added once
+
+  // Prevent the event listener from being added multiple times
+  // Use a flag to manage event listener state
+  if (!modal.hasAttribute('data-listener')) {
+    modal.setAttribute('data-listener', 'true');
+  }
 }
 
 // Function to close the modal
@@ -76,7 +86,11 @@ document.querySelectorAll('.custom-link').forEach((link) => {
   link.addEventListener('click', function (event) {
     event.preventDefault();
     const imageSrc = this.getAttribute('data-image');
-    const captionText = this.getAttribute('data-caption');
+    const captionText =
+      this.getAttribute('data-caption') || 'No caption available';
     openModal(imageSrc, captionText);
   });
 });
+
+// Adding event listener to the close button
+document.querySelector('.close').addEventListener('click', closeModal);

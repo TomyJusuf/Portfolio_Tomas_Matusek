@@ -292,55 +292,48 @@ input.form-control {
   border-right-color: var(--color-brand) !important;
 }
 
-/* Fullscreen Modal styles */
 .modal {
   display: none; /* Hidden by default */
-  position: fixed;
+  position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  left: 0px;
+  left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background with opacity */
+  cursor: pointer; /* Indicate that clicking will close the modal */
 }
 
-/* Modal Content (the image) */
 .modal-content {
   margin: auto;
-  margin-top: 50px;
   display: block;
-  width: 80%; /* Adjust based on your design */
-  height: 90vh;
-  max-width: 1000px; /* Adjust based on your design */
-  cursor: pointer; /* Show a pointer cursor on hover to indicate it is clickable */
-  object-fit: contain;
-  background: #2b2b2b7f;
+  width: 80%; /* Width of the image */
+  max-width: 700px; /* Maximum width */
+  cursor: auto; /* Indicate that clicking on the image does not close the modal */
 }
 
-/* Caption of Modal */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 #caption {
   margin: auto;
   display: block;
   text-align: center;
   color: #ccc;
-  padding: 10px 0;
-}
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  color: #f1f1f1;
-  font-size: 35px;
-  font-weight: bold;
-  cursor: pointer; /* Show a pointer cursor on hover */
-}
-
-/* Close Button on hover */
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
+  padding: 10px 20px;
 }
